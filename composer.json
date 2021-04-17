@@ -1,6 +1,19 @@
 {
+    "name": "sykez/cloudmonitor-telegram",
+    "description": "Send CloudMonitor alarms to Telegram from Alibaba Cloud via HTTP Callback.",
+    "homepage": "https://github.com/sykezz/cloudmonitor-telegram",
+    "license": "MIT",
+    "keywords": ["Alibaba", "Alibaba Cloud", "Cloud Monitor", "Telegram", "Alert", "Notification", "Aliyun", "Ali Cloud"],
+    "authors": [
+        {
+            "name": "sykez",
+            "email": "hello@sykez.com"
+        }
+    ],
     "require": {
+		"php": "^7.0",
         "guzzlehttp/guzzle": "^7.3",
         "vlucas/phpdotenv": "^5.3"
-    }
+    },
+    "minimum-stability": "dev"
 }
