@@ -29,7 +29,7 @@ function handler($request, $context): Response{
         $required_fields = ['alertName', 'alertState', 'curValue', 'instanceName', 'metricName'];
 
         if (validate_request($data, $required_fields)) {
-            $message = "`[CM]` *{$data['metricName']}* for `{$data['instanceName']}` is `{$data['alertState']}`. Value: {$data['curValue']}";
+            $message = "`[CM]` *{$data['alertName']} {$data['metricName']}* for `{$data['instanceName']}` is `{$data['alertState']}`. Value: {$data['curValue']}";
         }
     }
     // Event alarm
@@ -38,7 +38,7 @@ function handler($request, $context): Response{
         $required_fields = ['product', 'level', 'instanceName', 'name'];
 
         if (validate_request($data, $required_fields)) {
-            $message = "`[CM]` *{$data['product']} {$data['instanceName']}* - `{$data['name']}`";
+            $message = "`[CM]` *{$data['content']['instanceIds'][0]}* - `{$data['name']}`\n{$data['content']['description']}";
         }
     } else {
         $message = "`[CM]` Invalid request _content-type_.";
