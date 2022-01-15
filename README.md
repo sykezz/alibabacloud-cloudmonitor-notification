@@ -1,6 +1,6 @@
-# cloudmonitor-telegram
+# Alibaba Cloud - Cloud Monitor Notification
 
-Simple script to send CloudMonitor alarms to Telegram from Alibaba Cloud via HTTP Callback.
+Send Alibaba Cloud's Cloud Monitor notifications to Telegram.
 
 ## Host on your own server:
 - Clone
